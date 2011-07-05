@@ -1,0 +1,7 @@
+development:
+  app_id: APP_ID
+  secret: APP_SECRET
+
+test:
+  app_id: APP_ID
+  secret: APP_SECRET
