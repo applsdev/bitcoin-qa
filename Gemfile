@@ -11,7 +11,13 @@ gem 'jquery-rails'
 
 gem 'mysql', '2.8.1'
 
+gem 'haml'
+
 gem 'devise'
+
+gem 'gravatar_image_tag'
+
+gem "omniauth"
 
 gem 'exception_notification',
   :git => "http://github.com/rails/exception_notification.git",

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: MyString
+  committed_date: 2011-07-05 11:50:15
+  authored_date: 2011-07-05 11:50:15
+  message: MyText
+  tree: MyString
+  committer_id: 1
+
+two:
+  id: MyString
+  committed_date: 2011-07-05 11:50:15
+  authored_date: 2011-07-05 11:50:15
+  message: MyText
+  tree: MyString
+  committer_id: 1

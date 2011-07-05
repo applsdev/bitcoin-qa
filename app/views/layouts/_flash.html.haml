@@ -1,0 +1,6 @@
+- if flash and ![:notice, :alert, :error].map{ |i| flash[i].blank? }.all?
+  .flash
+    - [:notice, :alert, :error].each do |level|
+      - unless flash[level].blank?
+        %div{ :class => level.to_s }= flash[level].html_safe
+          

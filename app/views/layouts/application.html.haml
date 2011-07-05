@@ -1,0 +1,28 @@
+!!! XML
+!!! 
+
+%html
+  %head
+    %title Bitcoin QA
+    %meta{ :"http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
+
+    = stylesheet_link_tag %w{application}
+    = javascript_include_tag :defaults
+
+    = csrf_meta_tag
+
+    = yield :head
+
+  %body{ :class => [request[:controller], "#{request[:controller]}-#{request[:action]}"] }
+    #content
+      %h1#main-title= link_to(content_tag(:span, "Bitcoin QA"), root_path)
+
+      = render :partial => 'layouts/flash', :object => flash
+
+      #right-content
+        = link_to "Sign in with Github", user_omniauth_authorize_path(:github)
+
+        = yield
+
+        / This is used to force the container to stretch
+        %div{ :style => "clear:both" }
