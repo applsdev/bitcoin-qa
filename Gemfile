@@ -40,3 +40,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'turn'
 end
+
+group :production do
+  gem 'execjs'
+  gem 'therubyracer'
+end
