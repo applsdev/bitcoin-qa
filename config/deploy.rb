@@ -51,4 +51,4 @@ end
 
 after "deploy:update_code", :copy_production_configurations
 after :copy_production_configurations, :remove_config_ru
-after :remove_config_ru, "deploy:update_crontab"
+#after :remove_config_ru, "deploy:update_crontab"
