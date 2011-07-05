@@ -191,7 +191,12 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   github_config = YAML::load(File.open(File.join(Rails.root, "config", "github.yml")))[Rails.env.to_s].symbolize_keys
-  config.omniauth :github, github_config[:app_id], github_config[:app_id], :scope => 'user'
+  config.omniauth :github, github_config[:app_id], github_config[:app_id], 
+    :scope => 'user',
+    :client_options => {
+    :ssl => {
+      :ca_path => "/etc/ssl/certs"}
+  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
